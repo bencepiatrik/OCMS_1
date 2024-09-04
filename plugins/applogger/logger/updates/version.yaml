@@ -1,0 +1,4 @@
+v1.0.1: First version of Logger
+    - Run table migrations
+    - create_logs_table.php
+    - create_logs_table_v2.php

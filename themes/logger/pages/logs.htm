@@ -1,0 +1,23 @@
+title = "Logs"
+url = "/logs/:username?"
+layout = "default"
+
+[logs]
+==
+<h2>User Logs</h2>
+
+<form method="GET" action="{{ 'logs'|page }}">
+    <label for="username">Search by Username:</label>
+    <input type="text" id="username" name="username" value="{{ this.param('username') }}">
+    <button type="submit">Search</button>
+</form>
+
+<ul>
+    {% for log in logs %}
+    <li>
+        {{ log.datum_prichodu }} - {{ log.meno_uzivatela }} ({{ log.meskanie }} minutes late)
+    </li>
+    {% else %}
+    <li>No logs found.</li>
+    {% endfor %}
+</ul>

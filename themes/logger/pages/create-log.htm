@@ -1,0 +1,25 @@
+title = "Create New Log"
+url = "/create-log"
+layout = "default"
+==
+<h2>Create a New Log Entry</h2>
+
+<form action="{{ url('/create-log') }}" name="create-log" method="POST">
+
+    <div>
+        <label for="datum_prichodu">Date of Arrival:</label>
+        <input type="datetime-local" id="datum_prichodu" name="datum_prichodu" required>
+    </div>
+
+    <div>
+        <label for="meno_uzivatela">User Name:</label>
+        <input type="text" id="meno_uzivatela" name="meno_uzivatela" required>
+    </div>
+
+    <div>
+        <label for="meskanie">Delay (minutes):</label>
+        <input type="number" id="meskanie" name="meskanie" min="0" required>
+    </div>
+
+    <button type="submit">Create Log</button>
+</form>
