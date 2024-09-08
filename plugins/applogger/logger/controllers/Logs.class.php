@@ -1,6 +1,6 @@
 <?php
 
-namespace AppLogger\Logger\Controllers;
+namespace AppLogger\Logger\Controllers; // REVIEW pozri REVIEW.md a nezabudni potom zmeniť namespace na niečo ako AppLogger\Logger\Http\Controllers
 
 use AppLogger\Logger\Models\Log;
 use Illuminate\Http\Request;

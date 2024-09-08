@@ -16,6 +16,7 @@ sftp-config.json
 .ftpconfig
 .vscode/
 selenium.php
+# REVIEW composer.lock by nemal byť ignorovaný
 composer.lock
 package-lock.json
 /node_modules

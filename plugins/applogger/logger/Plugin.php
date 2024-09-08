@@ -36,7 +36,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        include_once  'plugins/applogger/logger/route.php';
+        include_once  'plugins/applogger/logger/route.php'; # REVIEW toto by tu nemalo byť treba (ak to teda nesúvisí nejako s tými components)
     }
 
     /**

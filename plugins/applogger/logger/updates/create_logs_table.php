@@ -17,7 +17,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('applogger_logs', function(Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id'); // REVIEW použi skôr $table->id();
             $table->timestamp('datum_prichodu');
             $table->string('meno_uzivatela');
             $table->integer('meskanie')->default(0);
