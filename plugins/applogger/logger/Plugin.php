@@ -17,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name' => 'Logger',
-            'description' => 'No description provided yet...',
+            'description' => 'Provides logging functionality',
             'author' => 'AppLogger',
             'icon' => 'icon-leaf'
         ];
@@ -36,7 +36,7 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        include_once  'plugins/applogger/logger/route.php'; # REVIEW toto by tu nemalo byť treba (ak to teda nesúvisí nejako s tými components)
+
     }
 
     /**

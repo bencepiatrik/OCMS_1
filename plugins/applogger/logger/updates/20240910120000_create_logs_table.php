@@ -1,5 +1,6 @@
-<?php
+<?php namespace Applogger\Logger\Updates;
 
+use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
@@ -15,11 +16,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('applogger_logs', function(Blueprint $table) {
-            $table->increments('id');
-            $table->timestamp('datum_prichodu');
+        Schema::create('applogger_logger_logs', function(Blueprint $table) {
+            $table->id();
+            $table->date('datum_prichodu');
             $table->string('meno_uzivatela');
-            $table->integer('meskanie')->default(0);
+            $table->integer('meskanie')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applogger_logs');
+        Schema::dropIfExists('applogger_logger_logs');
     }
 };

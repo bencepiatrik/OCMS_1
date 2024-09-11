@@ -9,6 +9,8 @@ Je fajn že máš v migrácii timestamp, aj názov ako taký je fajn, len to umi
 Zvyčajne sa migrácia nachádza v parentPlugin.plugin.updates, čo tam vlastne aj je, lenže ako keby máš tú migráciu 2 krát, raz v database/migrations a raz v updates folderi
 Prečo máš vlastne vôbec database/migrations? :DD (odpovede na otázky v review mi môžeš potom písať do slacku)
 Upravil by som to tak aby si to mal v applogger.logger.updates, s tým správnym názvom (čiže timestamp + názov)
+- migraciu som raz spravil pomocou artisan make:migration, takto automaticky prida tam timestamp ale migracia sa ulozi niekde inde ako v plugine.
+
 
 Controllers
 Super že si si urobil controller pre funkcionality Logov, opäť ale ide o umiestnenie, v ďalšej lekcii budeš mať v controllers folderi iné veci

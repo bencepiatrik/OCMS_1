@@ -1,13 +1,13 @@
 <?php
 
+use AppLogger\Logger\Controllers\LogController;
 use Illuminate\Support\Facades\Route;
-use AppLogger\Logger\Controllers\Logs;
 
-Route::controller(Log::class)->group(function () {
-    Route::post('create-log', 'createLog');
-    Route::get('logs', 'getAllLogs');
-    Route::get('logs/{username}', 'getLogsByUser');
-});
+    Route::post('/create-log', [LogController::class, 'createLog']);
+    Route::get('/logs', [LogController::class, 'getAllLogs']);
+    Route::get('/{username}', [LogController::class, 'getLogsByUser']);
+
+
 
 /*
 

@@ -14,9 +14,8 @@ class Log extends Model
     /**
      * @var string table name
      */
-    protected $table = 'applogger_logs';
+    protected $table = 'applogger_logger_logs';
     protected $fillable = ['datum_prichodu', 'meno_uzivatela', 'meskanie'];
-    public $timestamps = false;
 
 
     /**
